@@ -229,7 +229,7 @@ jobs:
             echo "  web: :${GITHUB_SHA}, :${GITHUB_REF_NAME}"
           fi
       - name: Build backend
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: apps/backend
           target: prod
@@ -246,7 +246,7 @@ jobs:
           cache-from: type=gha,scope=lumen-api
           cache-to: type=gha,mode=max,scope=lumen-api
       - name: Build frontend
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: apps/frontend
           target: prod
