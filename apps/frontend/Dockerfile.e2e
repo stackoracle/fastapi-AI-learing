@@ -11,7 +11,7 @@
 # pairs this with an anonymous `/work/node_modules` volume so
 # the host bind-mount of `./apps/frontend:/work` doesn't
 # shadow the baked install.
-FROM mcr.microsoft.com/playwright:v1.49.1-jammy
+FROM mcr.microsoft.com/playwright:v1.63.0-jammy
 
 ENV PNPM_HOME=/root/.local/share/pnpm \
     PATH=/root/.local/share/pnpm:$PATH \
