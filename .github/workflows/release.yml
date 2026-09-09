@@ -65,7 +65,7 @@ jobs:
             p==1 { print }
           ' CHANGELOG.md > release-notes.md || echo "Release $GITHUB_REF_NAME" > release-notes.md
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           body_path: release-notes.md
           generate_release_notes: true
