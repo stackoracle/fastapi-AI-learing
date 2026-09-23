@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7-labs
 # ---------------- base ----------------
-FROM node:22-alpine AS base
+FROM node:25-alpine AS base
 ENV PNPM_HOME=/root/.local/share/pnpm \
     PATH=/root/.local/share/pnpm:$PATH \
     CI=true
@@ -25,7 +25,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN pnpm build
 
 # ---------------- prod ----------------
-FROM node:22-alpine AS prod
+FROM node:25-alpine AS prod
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
     PORT=3000 \
